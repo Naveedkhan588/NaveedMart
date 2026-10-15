@@ -712,45 +712,58 @@ ul a:hover {
 .signin-submit-btn:hover {
     background-color: #f7ca00;
 }
-/* --- Updated Mobile Responsive Fixes --- */
+/* --- Ultra Clean Mobile Responsive Fixes --- */
 @media (max-width: 768px) {
-  /* Navbar ko compact aur clean karna */
+  /* Header ko multi-line flexbox banana */
   .navbar {
-    height: auto;
-    padding: 8px 10px;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    height: auto !important;
+    padding: 10px !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 8px !important;
   }
 
-  /* Extra elements jo mobile par jagah gherte hain unhein hide karna */
+  /* Unnecessary items hide karna mobile par */
   .nav-deliver, 
   .nav-signin, 
-  .nav-return,
+  .nav-return, 
   .panel {
     display: none !important;
   }
 
-  /* Search bar ko mobile par adjust karna */
+  /* Search bar ko poori agli line (100% width) dena */
   .nav-search {
-    flex-grow: 1;
-    margin: 0 10px;
-    height: 40px;
+    order: 3 !important;
+    width: 100% !important;
+    margin-top: 5px !important;
+    height: 38px !important;
+  }
+
+  .search-select {
+    width: 50px !important;
   }
 
   .search-input {
-    font-size: 14px;
+    width: 100% !important;
   }
 
-  /* Shop section 1 column layout */
+  /* Hero Section image sizing */
+  .hero-section {
+    height: 200px !important;
+    background-size: cover !important;
+  }
+
+  /* Shop Grid Section */
   .shop-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 10px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    padding: 10px !important;
   }
 
   .box {
     width: 100% !important;
-    margin: 0;
   }
 }
