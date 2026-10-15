@@ -487,40 +487,60 @@ ul a {
     font-size: 0.75rem;
     text-align: center;
 }
-/* ================= ULTIMATE MOBILE FIX ================= */
+/* ================= FIXED MOBILE CSS ================= */
 
-/* ================= REAL AMAZON STYLE MOBILE NAVIGATION ================= */
+/* Sidebar Overlay & Sign-in Modal Defaults (Inko Forcefully Hide Rakhne Ke Liye) */
+.sidebar-overlay,
+.signin-overlay,
+.sidebar-menu,
+.signin-modal {
+    display: none !important;
+}
+
+.sidebar-overlay.active,
+.signin-overlay.active,
+.sidebar-menu.active,
+.signin-modal.active {
+    display: block !important;
+}
 
 @media (max-width: 768px) {
-    /* 1. Header Layout Fix */
+    /* 1. Reset Body & Page Overflow */
+    html, body {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    /* 2. Compact Top Navbar */
     .navbar {
+        height: auto !important;
         display: flex !important;
         flex-wrap: wrap !important;
-        height: auto !important;
-        padding: 8px 12px !important;
+        padding: 8px 10px !important;
         justify-content: space-between !important;
         align-items: center !important;
         background-color: #0f1111 !important;
     }
 
-    /* Logo & Left Menu Icon */
     .nav-logo {
         order: 1 !important;
     }
 
-    /* Deliver To Bar (Mobile Sub-bar) */
-    .nav-deliver, .nav-address {
+    .nav-signin, .nav-cart {
         display: flex !important;
-        order: 4 !important;
-        width: 100% !important;
-        background-color: #232f3e !important;
-        padding: 6px 12px !important;
+        align-items: center !important;
+        gap: 5px !important;
+        order: 2 !important;
         color: white !important;
-        font-size: 0.8rem !important;
-        margin-top: 5px !important;
+        font-size: 0.85rem !important;
     }
 
-    /* Search Bar Full Width */
+    .nav-return, .nav-deliver {
+        display: none !important;
+    }
+
+    /* 3. Full-width Search Bar */
     .nav-search {
         order: 3 !important;
         width: 100% !important;
@@ -532,24 +552,10 @@ ul a {
         width: 100% !important;
     }
 
-    /* Right Side Icons: Sign In & Cart */
-    .nav-signin, .nav-cart {
-        display: flex !important;
-        align-items: center !important;
-        gap: 5px !important;
-        order: 2 !important;
-        color: white !important;
-        font-size: 0.85rem !important;
-    }
-
-    .nav-return {
-        display: none !important; /* Mobile Amazon hidden */
-    }
-
-    /* 2. Sub Navigation Panel (Today's Deals, Gift Cards, Registry, etc.) */
+    /* 4. Sub-Navigation Panel (Todays Deals, Customer Service, etc.) */
     .panel {
         display: flex !important;
-        overflow-x: auto !important; /* Horizontal scroll bar for categories */
+        overflow-x: auto !important;
         white-space: nowrap !important;
         background-color: #222f3d !important;
         padding: 8px 10px !important;
@@ -557,7 +563,7 @@ ul a {
     }
 
     .panel::-webkit-scrollbar {
-        display: none !important; /* Hide scrollbar for clean UI */
+        display: none !important;
     }
 
     .panel-ops {
@@ -572,9 +578,9 @@ ul a {
         color: white !important;
     }
 
-    /* 3. Hero Banner & Content */
+    /* 5. Hero Banner Section */
     .hero-section {
-        height: 230px !important;
+        height: 220px !important;
         background-size: cover !important;
         background-position: center !important;
         display: flex !important;
@@ -587,9 +593,9 @@ ul a {
         position: relative !important;
         top: 0 !important;
         left: 0 !important;
-        width: 95% !important;
+        width: 92% !important;
         text-align: center !important;
-        background: rgba(255, 255, 255, 0.9) !important;
+        background: rgba(255, 255, 255, 0.92) !important;
         padding: 12px !important;
         border-radius: 8px !important;
     }
@@ -598,7 +604,7 @@ ul a {
         display: none !important;
     }
 
-    /* 4. Products Grid */
+    /* 6. Product Cards Grid */
     .shop-section {
         margin-top: 15px !important;
         flex-direction: column !important;
