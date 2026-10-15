@@ -1,0 +1,714 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #eaeded;
+}
+
+/* ================= 1. NAVBAR ================= */
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.brand-icon {
+    color: #f71707;
+    font-size: 1.4rem;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: normal;
+}
+
+.brand-accent,
+.brand-name .brand-accent {
+    color: #f71707;
+    font-size: 1.1rem !important;
+    font-weight: 700;
+    display: inline;
+    vertical-align: baseline;
+}
+
+.border {
+    border: 2px solid transparent;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+}
+
+/* ================= 2. Deliver to Pakistan ================= */
+.nav-address {
+    cursor: pointer !important;
+}
+.add-first {
+    color: #cccccc;
+    font-size: 0.8rem;
+    margin-left: 15px;
+}
+
+.add-second {
+    margin-left: 3px;
+    font-size: 0.85rem;    
+    font-weight: 700;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* ================= 3. Search Bar ================= */
+.nav-search {
+    display: flex;
+    background-color: black;
+    width: 620px;
+    height: 40px;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    padding-left: 10px;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #f71707;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ================= 4. Sign In & Return ================= */
+span {
+    font-size: 0.7rem;
+}
+
+.nav-second {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart i {
+    font-size: 30px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.nav-cart{
+    cursor:pointer
+}
+.nav-return{
+    cursor: pointer;
+}
+.nav-signin{
+    cursor: pointer;
+}
+
+
+
+
+/* ================= 5. Secondary Navigation PANEL ================= */
+.panel {
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.panel-ops p {
+    display: inline;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.panel-ops {
+    width: 70%;
+    font-size: 0.85rem;
+}
+
+.panel-deals {
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.panel-all {
+    cursor: pointer;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+    background-image: url('mart1.avif');
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    justify-content: flex-start;
+    background-position: center 50%;
+    align-items: flex-end;
+    mask-image: linear-gradient(180deg, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
+    position: relative;
+}
+
+.hero-msg {
+    background-color: white;
+    color: black;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    width: 80%;
+    margin-bottom: 90px;
+    margin-left: 110px;
+}
+
+.hero-msg a {
+    color: #007185;
+}
+
+.hero-content {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    max-width: 400px;
+    color: #111;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.hero-btn {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background-color: #f71707;
+    color: #111;
+}
+
+/* ================= SHOP SECTIONS (Box Layout / Inner Structure) ================= */
+
+.shop-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -70px;
+    margin-bottom: 40px !important;
+    position: relative;
+    z-index: 2;
+}
+
+.shop-section2 {
+    margin-top: 10px;
+}
+
+/* Generic Box Rule */
+.box {
+    height: 420px;
+    width: 21%;
+    background-color: white;
+    padding: 20px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.box > p:last-child, 
+.box3-tag {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.box a {
+    color: #007185;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.box a:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+/* Single Image Styling inside Boxes */
+.box-image {
+    height: 270px;
+    width: 100%;
+}
+
+.box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sub-Grids Structure */
+.box3-main-img {
+    height: 110px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.box3-main-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sub-title {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.box3-sub-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box3-sub-grid .sub-item {
+    width: 30%;
+}
+
+.box4-sub-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+
+.box4-sub-grid .sub-item {
+    width: 48%;
+}
+
+/* Common HTML Image Container inside Sub-Items */
+.box-image-small {
+    height: 115px;
+    width: 100%;
+}
+
+.box-image-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sub-item p {
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+/* ================= HORIZONTAL SLIDER SECTION ================= */
+.products-slider-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 96%;
+    max-width: 1480px;
+}
+
+.products-slider-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0f1111;
+}
+
+.products-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.products-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px;
+}
+
+.products-container::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #d5d9d9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    height: 45px;
+    width: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.slider-btn:hover {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    clear: both;
+    display: block;
+    margin-top: 30px !important;
+    position: relative;
+    z-index: 1;
+}
+
+.foot-panel1 {
+    height: 40px;
+    background-color: #37475a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.foot-panel2 {
+    min-height: 300px;
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+ul p {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+ul a {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    color: #dddddd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul a:hover {
+    text-decoration: underline;
+}
+
+.foot-panel3 {
+    background-color: #222f3d;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.5px solid #3a4553;
+}
+
+.foot-panel4 {
+    background-color: #131a22;
+    padding: 15px 0;
+    color: #dddddd;
+}
+
+.pages {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.pages a {
+    margin: 0 10px;
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* ================= SIDEBAR MENU STYLES ================= */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: -380px; /* Initially screen se bahar hidden rahega */
+    width: 350px;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+.sidebar-menu.active {
+    left: 0; /* Jab active class lagegi toh screen par slide hoke ayega */
+}
+
+.sidebar-header {
+    background-color: #232f3e;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sidebar-header .close-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.sidebar-content h3 {
+    font-size: 1.05rem;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.sidebar-content li {
+    margin-bottom: 12px;
+}
+
+.sidebar-content a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+}
+
+.sidebar-content a:hover {
+    color: #f71707;
+}
+
+.sidebar-content hr {
+    border: 0;
+    border-top: 1px solid #e7e7e7;
+    margin: 15px 0;
+}
+
+/* ================= SIGN-IN MODAL STYLES ================= */
+.signin-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+}
+
+.signin-overlay.active {
+    display: block;
+}
+
+.signin-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.signin-modal.active {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.signin-modal-header {
+    background-color: #232f3e;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signin-modal-header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.signin-modal-body {
+    padding: 20px;
+}
+
+.signin-modal-body label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #111111;
+}
+
+.signin-modal-body input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a6a6a6;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.signin-submit-btn {
+    width: 100%;
+    background-color: #ffd814;
+    border: 1px solid #fcd200;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.signin-submit-btn:hover {
+    background-color: #f7ca00;
+}

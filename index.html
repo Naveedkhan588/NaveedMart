@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my web project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Main Header / Sari items ko horizontal line mein align karta hai -->
+
+        <div class="navbar">
+            <!-- Brand Logo Box: 'nav-logo' styling ke liye .'border' border set karni klye -->
+            <div class="nav-logo border"> 
+                <i class="fa-solid fa-cart-shopping brand-icon"></i><!--Mart icon-->
+                <!--span ek khass hisse/word ko target karke us par CSS (styling) lagana hota hai. -->
+                <span class="brand-name">Naveed<span class="brand-accent">Mart</span></span> 
+            </div>
+
+            <!------------  2.Deliver to pakistan  ------->
+
+            <div class="nav-address border">
+                <p class="add-first">deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i> <!--location icon-->
+                    <p class="add-second">Pakistan</p>
+                </div>
+            </div>
+
+            <!---------------  3. Search Bar  ------------>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option value="All">All</option>
+                    <ooption value="Elrectronics">Electronics</ooption>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Computer">Computer</option>
+                    <option value="Home">Home</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Deals">Deals</option>
+                </select>
+                <input placeholder="search naveedmart" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <!---------------  4. Sign In and return  ------------>
+            <div class="nav-signin border">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Accounts & Lists</p>
+            </div>
+
+            <div class="nav-return border">
+                <p><span>return</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
+
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+
+        <!---------------------     All  section and sighn in  ------------------------------------->
+
+    <!-- Left Sliding Sidebar Menu -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar-menu" id="sidebarMenu">
+    <div class="sidebar-header">
+        <i class="fa-solid fa-user"></i>
+        <span>Hello, Sign In</span>
+        <button class="close-btn" id="closeSidebarBtn">&times;</button>
+    </div>
+    <div class="sidebar-content">
+        <h3>Trending</h3>
+        <ul>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Movers and Shakers</a></li>
+        </ul>
+        <hr>
+        <h3>Shop By Category</h3>
+        <ul>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Computers & Laptops</a></li>
+            <li><a href="#">Fashion & Apparel</a></li>
+            <li><a href="#">Home & Kitchen</a></li>
+            <li><a href="#">Beauty & Personal Care</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Sign In Modal Popup -->
+<div class="signin-overlay" id="signinOverlay"></div>
+<div class="signin-modal" id="signinModal">
+    <div class="signin-modal-header">
+        <h2>Sign-In</h2>
+        <button class="close-modal-btn" id="closeSigninBtn">&times;</button>
+    </div>
+    <div class="signin-modal-body">
+        <label>Email or mobile phone number</label>
+        <input type="text" id="signinEmailInput" placeholder="Enter your email">
+        <button class="signin-submit-btn" id="signinSubmitBtn">Continue</button>
+    </div>
+</div>
+
+        <!---------------  5. Secondary Navigation panel  ------------>
+        <div class="panel">
+            <div class="panel-all border">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p class="border">Todays Deals</p>
+                <p class="border">Customer Service</p>
+                <p class="border">Gift Cards</p>
+                <p class="border">Sell</p>
+                <p class="border">Registry</p>
+            </div>
+
+            <div class="panel-deals border">
+                Shop deals in Electronics
+            </div>
+        </div>
+    </header>
+
+    <!---------------  6. Single Combined Hero Section------------>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Grand Opening Sale!</h1>
+            <p>Up to 50% OFF on School, Kitchen & Fashion Supplies.</p>
+            <button class="hero-btn">Shop Now</button>
+        </div>
+        
+        <div class="hero-msg">
+            <p>You are on naveedmart.com. Shop millions of products with fast delivery. <a href="#">Click here to explore deals.</a></p>
+        </div>
+    </div>
+
+    <!------------------  7. Shop Section 1 (Box Layout / Inner Structure) ----------------->
+
+    <div class="shop-section"> <!-- Outer Grid Container: Jo tamam 4 boxes ko ek line mein sambhalta hai -->
+        
+        <!-- Box 1 -->
+        <div class="box1 box"> <!-- card1 container -->
+            <h3>Get your game on</h3>
+            <div class="box-image">
+                <img src="game2.jpg" alt="Gaming">
+            </div>
+            <p><a href="#">Shop now</a></p>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="box2 box"> <!-- card2 container -->
+            <h3>Must-haves for every student</h3>
+            <div class="box-image">
+                <img src="stationary2.jpg" alt="Student Supplies">
+            </div>
+            <p><a href="#">Shop back to school</a></p>
+        </div>
+          
+        <!-- Box 3 -->
+        <div class="box3 box">
+            <h3>Top categories in Kitchen appliances</h3>
+            <div class="box3-main-img">
+                <img src="cooker2.jpg" alt="Cooker">
+            </div>
+            <p class="sub-title">cooker</p>
+
+            <div class="box3-sub-grid">
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="cofee.jpg" alt="Coffee">
+                    </div>
+                    <p>cofee</p>
+                </div>
+                
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="post.jpg" alt="Pots">
+                    </div>
+                    <p>pots and...</p>
+                </div>
+
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="kettle.jpg" alt="Kettles">
+                    </div>
+                    <p>kettles</p>
+                </div>
+            </div>
+
+            <div class="box3-tag">
+                <p><a href="#">Explore all products in kitchen</a></p>
+            </div>
+        </div>
+            
+        <!-- Box 4 -->
+        <div class="box box4">
+            <h3>Must-have school supplies</h3>
+            <div class="box4-sub-grid">
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="backpacks.jpg" alt="Backpacks">
+                    </div>
+                    <p>Backpacks</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="electronics.jpg" alt="Electronics">
+                    </div>
+                    <p>Electronics</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="stationary.jpg" alt="Stationery">
+                    </div>
+                    <p>Stationery</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="fashion.jpg" alt="Fashion">
+                    </div>
+                    <p>Fashion</p>
+                </div>
+            </div>
+            <p><a href="#">See more</a></p>
+        </div>
+    </div>
+    
+    <!------------------  2nd Shop Section (Box Layout / Inner Structure) ----------------->
+
+    <div class="shop-section shop-section2"> <!-- Outer Grid Container: Jo tamam 4 boxes ko ek line mein sambhalta hai -->
+        
+        <!-- Box 5 -->
+        <div class="box box5">
+            <h3>Most Loved Watches</h3>
+            <div class="box4-sub-grid">
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="hhh.jpg.jpg" alt="Men Watches">
+                    </div>
+                    <p>Men</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="women.jpg" alt="Women Watches">
+                    </div>
+                    <p>Women</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="boy.jpg" alt="Boys Watches">
+                    </div>
+                    <p>Boys</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="girl.jpg" alt="Girls Watches">
+                    </div>
+                    <p>Girls</p>
+                </div>
+            </div>
+            <p><a href="#">See more</a></p>
+        </div>
+
+        <!-- Box 6 -->
+        <div class="box6 box"> <!-- card1 container -->
+            <h3>Fashion Trend</h3>
+            <div class="box-image">
+                <img src="fashion2.jpg" alt="Fashion Trend">
+            </div>
+            <p><a href="https://www.amazon.com/s?k=gaming">Shop now</a></p>
+        </div>
+
+        <!-- Box 7 -->
+        <div class="box box7">
+            <h3>Tech Essentials & Accessories</h3>
+            <div class="box4-sub-grid">
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="headphone2.jpg" alt="Headphones">
+                    </div>
+                    <p>Headphones</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="tablet.jpg" alt="Tablet">
+                    </div>
+                    <p>Tablet</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="mobilecase.jpg" alt="Mobile Cases">
+                    </div>
+                    <p>Mobile cases</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="speaker2.jpg" alt="Speakers">
+                    </div>
+                    <p>Speakers</p>
+                </div>
+            </div>
+            <p><a href="#">See more</a></p>
+        </div>
+          
+        <!-- Box 8 -->
+        <div class="box box8">
+            <h3>Level up your beauty routine</h3>
+            <div class="box4-sub-grid">
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="makeup2.jpg" alt="Makeup">
+                    </div>
+                    <p>Makeup</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="mirror2.jpg" alt="Mirror">
+                    </div>
+                    <p>Mirror</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="sponges2.jpg" alt="Sponges">
+                    </div>
+                    <p>Sponges</p>
+                </div>
+                <div class="sub-item">
+                    <div class="box-image-small">
+                        <img src="brushe2.jpg" alt="Brushes">
+                    </div>
+                    <p>Brushes</p>
+                </div>
+            </div>
+            <p><a href="#">See more</a></p>
+        </div>
+    </div>
+
+    <!------------------ Horizontal Slider Section ----------------------------->
+    
+    <div class="products-slider-section">
+        <h2>Popular products in Apparel internationally</h2>
+        
+        <div class="products-slider">
+            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            
+            <div class="products-container">
+                <div class="product-card">
+                    <img src="shirt2.png" alt="Shirt">
+                </div>
+                <div class="product-card">
+                    <img src="tie.jpg" alt="Tie">
+                </div>
+                <div class="product-card">
+                    <img src="jacket.jpg" alt="Jacket">
+                </div>
+                <div class="product-card">
+                    <img src="naveed5.png" alt="Shirt">
+                </div>
+                <div class="product-card">
+                    <img src="bandana.jpg" alt="Bandana">
+                </div>
+                <div class="product-card">
+                    <img src="hoddy.jpg" alt="Hoodie">
+                </div>
+                <div class="product-card">
+                    <img src="bag.jpg" alt="Bag">
+                </div>
+            </div>
+            
+            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!------------------ 8. Foot Panel ----------------->
+    <footer>
+        <div class="foot-panel1">
+            Back to top
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About NaveedMart</a>
+                <a>NaveedMart Stories</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+                <a>Sell products on NaveedMart</a>
+                <a>Become an Affiliate</a>
+                <a>Advertise Your Products</a>
+                <a>Self-Publish with Us</a>
+            </ul>
+            <ul>
+                <p>Payment Products</p>
+                <a>Business Card</a>
+                <a>Shop with Points</a>
+                <a>Reload Your Balance</a>
+                <a>Currency Converter</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Your Account</a>
+                <a>Your Orders</a>
+                <a>Shipping Rates & Policies</a>
+                <a>Help Center</a>
+            </ul>
+        </div>
+        
+        <div class="foot-panel3">
+            <!-- Existing Logo Classes Reuse -->
+            <div class="nav-logo">
+                <i class="fa-solid fa-cart-shopping brand-icon"></i>
+                <span class="brand-name">Naveed<span class="brand-accent">Mart</span></span>
+            </div>
+        </div>
+
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+                <a>Consumer Health Data Privacy Disclosure</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 NaveedMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript File Link -->
+    <script src="script.js"></script>
+</body>
+</html>
