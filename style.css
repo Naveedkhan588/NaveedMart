@@ -12,6 +12,10 @@ html, body {
     background-color: #eaeded;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* ================= 1. NAVBAR ================= */
 .navbar {
     height: 60px;
@@ -64,6 +68,7 @@ html, body {
 .nav-address {
     cursor: pointer !important;
 }
+
 .add-first {
     color: #cccccc;
     font-size: 0.8rem;
@@ -72,7 +77,7 @@ html, body {
 
 .add-second {
     margin-left: 3px;
-    font-size: 0.85rem;    
+    font-size: 0.85rem;
     font-weight: 700;
 }
 
@@ -102,6 +107,7 @@ html, body {
 
 .search-input {
     width: 100%;
+    min-width: 0;
     font-size: 1rem;
     border: none;
     padding-left: 10px;
@@ -109,6 +115,7 @@ html, body {
 
 .search-icon {
     width: 45px;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,6 +174,169 @@ span {
     cursor: pointer;
 }
 
+/* ================= SIDEBAR MENU ================= */
+.sidebar-overlay,
+.signin-overlay,
+.sidebar-menu,
+.signin-modal {
+    display: none !important;
+}
+
+.sidebar-overlay.active,
+.signin-overlay.active,
+.sidebar-menu.active,
+.signin-modal.active {
+    display: block !important;
+}
+
+.sidebar-overlay,
+.signin-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.signin-overlay {
+    z-index: 1100;
+}
+
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 85%;
+    background-color: #ffffff;
+    color: #111;
+    overflow-y: auto;
+    z-index: 1001;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-header {
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    font-weight: 700;
+}
+
+.sidebar-header span {
+    font-size: 1rem;
+}
+
+.close-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.sidebar-content {
+    padding: 15px;
+}
+
+.sidebar-content h3 {
+    font-size: 1.05rem;
+    margin: 8px 0;
+}
+
+.sidebar-content ul {
+    list-style: none;
+    margin-top: 0;
+}
+
+.sidebar-content ul a {
+    display: block;
+    color: #111;
+    font-size: 0.95rem;
+    padding: 10px 0;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.sidebar-content ul a:hover {
+    color: #c7511f;
+}
+
+.sidebar-content hr {
+    margin: 12px 0;
+    border: none;
+    border-top: 1px solid #d5d9d9;
+}
+
+/* ================= SIGN-IN MODAL ================= */
+.signin-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 380px;
+    background-color: #ffffff;
+    color: #111;
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1101;
+}
+
+.signin-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.signin-modal-header h2 {
+    font-size: 1.4rem;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.signin-modal-body label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.signin-modal-body input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
+.signin-submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f71707;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 /* ================= HERO SECTION ================= */
 .hero-section {
     background-image: url('mart1.avif');
@@ -178,6 +348,7 @@ span {
     background-position: center 50%;
     align-items: center;
     mask-image: linear-gradient(180deg, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
     position: relative;
 }
 
@@ -368,6 +539,7 @@ span {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 10px 5px;
+    width: 100%;
 }
 
 .products-container::-webkit-scrollbar {
@@ -441,6 +613,7 @@ footer {
 }
 
 ul { margin-top: 10px; }
+
 ul p {
     font-weight: bold;
     font-size: 1rem;
@@ -487,161 +660,255 @@ ul a {
     font-size: 0.75rem;
     text-align: center;
 }
-/* ================= FIXED MOBILE CSS ================= */
 
+
+/* =====================================================
+   MOBILE (Amazon jaisa layout) - screen 768px se choti
+   ===================================================== */
 @media (max-width: 768px) {
-    /* 1. Reset Body & Page Overflow */
-    html, body {
-        width: 100% !important;
-        max-width: 100vw !important;
-        overflow-x: hidden !important;
-    }
 
-    /* 2. Compact Top Navbar & Swapping Positions */
+    /* ---------- NAVBAR ---------- */
     .navbar {
-        height: auto !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        padding: 8px 10px !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        background-color: #0f1111 !important;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+        row-gap: 8px;
     }
 
-    /* NaveedMart Logo to Left */
     .nav-logo {
-        order: 1 !important;
-        margin-right: auto !important;
+        order: 1;
+        padding: 0;
     }
 
-    /* Deliver to Pakistan to Right side (where logo was) */
-    .nav-deliver, .nav-address {
-        display: flex !important;
-        order: 2 !important;
-        background-color: transparent !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        font-size: 0.75rem !important;
+    .nav-signin {
+        order: 2;
+        margin-left: auto;
+        margin-right: 10px;
     }
 
-    .add-first {
-        color: #cccccc !important;
-        font-size: 0.65rem !important;
-        margin-left: 0 !important;
+    .nav-signin span {
+        font-size: 0.85rem;
     }
 
-    .add-second {
-        font-size: 0.75rem !important;
-        color: white !important;
+    .nav-signin .nav-second {
+        display: none;
     }
 
-    /* Sign-in & Cart Icons */
-    .nav-signin, .nav-cart {
-        display: flex !important;
-        align-items: center !important;
-        order: 3 !important;
-        color: white !important;
-        font-size: 0.85rem !important;
-        margin-left: 10px !important;
+    .nav-cart {
+        order: 3;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .nav-cart i {
+        font-size: 24px;
     }
 
     .nav-return {
-        display: none !important;
+        display: none;
     }
 
-    /* Full-width Search Bar on Next Line */
+    /* Search bar poori width par, alag line mein */
     .nav-search {
-        order: 4 !important;
-        width: 100% !important;
-        margin-top: 8px !important;
-        height: 38px !important;
+        order: 4;
+        width: 100%;
+        height: 40px;
     }
 
-    .search-input {
-        width: 100% !important;
+    .search-select {
+        width: 60px;
+        flex-shrink: 0;
     }
 
-    /* 3. Sub-Navigation Panel (Todays Deals, Customer Service, etc.) */
+    /* Deliver to Pakistan search ke neeche ek line mein */
+    .nav-address {
+        order: 5;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .add-first {
+        margin-left: 0;
+    }
+
+    /* ---------- SECONDARY PANEL (scroll hone wali strip) ---------- */
     .panel {
-        display: flex !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
-        background-color: #222f3d !important;
-        padding: 8px 10px !important;
-        -webkit-overflow-scrolling: touch !important;
+        height: auto;
+        justify-content: flex-start;
+        gap: 18px;
+        padding: 10px;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
     }
 
     .panel::-webkit-scrollbar {
-        display: none !important;
+        display: none;
+    }
+
+    .panel-all {
+        flex-shrink: 0;
     }
 
     .panel-ops {
-        display: flex !important;
-        width: auto !important;
-        gap: 15px !important;
+        width: auto;
+        display: flex;
+        gap: 18px;
+        flex-shrink: 0;
     }
 
     .panel-ops p {
-        font-size: 0.85rem !important;
-        margin-left: 0 !important;
-        color: white !important;
+        display: block;
+        margin-left: 0;
     }
 
-    /* 4. Grand Opening Sale Box - Compact Size like Laptop */
+    .panel-deals {
+        display: none;
+    }
+
+    /* ---------- HERO ---------- */
     .hero-section {
-        height: 280px !important;
-        background-size: cover !important;
-        background-position: center !important;
-        display: flex !important;
-        align-items: flex-end !important; /* Laptop style bottom alignment */
-        justify-content: center !important;
-        padding-bottom: 20px !important;
+        height: 240px;
+        justify-content: center;
+        padding: 10px;
+        mask-image: none;
+        -webkit-mask-image: none;
     }
 
     .hero-content {
-        position: relative !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 80% !important; /* Chota box taake background nazar aaye */
-        max-width: 320px !important;
-        text-align: center !important;
-        background: rgba(255, 255, 255, 0.9) !important;
-        padding: 10px 15px !important;
-        border-radius: 6px !important;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+        position: static;
+        width: 92%;
+        max-width: none;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.92);
+        padding: 14px;
+        border-radius: 8px;
     }
 
     .hero-content h1 {
-        font-size: 1.1rem !important;
-        margin-bottom: 4px !important;
+        font-size: 1.4rem;
+        margin-bottom: 6px;
     }
 
     .hero-content p {
-        font-size: 0.75rem !important;
-        margin-bottom: 8px !important;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
     }
 
     .hero-btn {
-        padding: 5px 14px !important;
-        font-size: 0.75rem !important;
+        padding: 8px 18px;
+        font-size: 0.9rem;
     }
 
     .hero-msg {
-        display: none !important;
+        display: none;
     }
 
-    /* 5. Product Cards Grid */
-    .shop-section {
-        margin-top: 15px !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 10px !important;
-        gap: 15px !important;
+    /* ---------- SHOP BOXES (2 columns, Amazon style) ---------- */
+    .shop-section,
+    .shop-section2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px;
+        margin-top: 0;
+        margin-bottom: 10px !important;
     }
 
     .box {
-        width: 100% !important;
-        height: auto !important;
-        min-height: unset !important;
+        width: 100%;
+        min-height: auto;
+        padding: 12px 10px;
+    }
+
+    .box h3 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .box-image {
+        height: 150px;
+    }
+
+    .box3-main-img {
+        height: 90px;
+    }
+
+    .box-image-small {
+        height: 70px;
+    }
+
+    .box3-sub-grid .sub-item {
+        width: 31%;
+    }
+
+    .box4-sub-grid {
+        row-gap: 10px;
+    }
+
+    .sub-item p {
+        font-size: 0.7rem;
+    }
+
+    .box a {
+        font-size: 0.8rem;
+    }
+
+    /* ---------- PRODUCTS SLIDER (finger se swipe) ---------- */
+    .products-slider-section {
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px;
+    }
+
+    .products-slider-section h2 {
+        font-size: 1.05rem;
+    }
+
+    .products-container {
+        gap: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .product-card {
+        width: 130px;
+        height: 130px;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+        margin-top: 15px !important;
+    }
+
+    .foot-panel2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 15px;
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    .foot-panel2 ul {
+        margin-top: 0;
+    }
+
+    .pages {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .pages a {
+        margin: 4px 8px;
     }
 }
