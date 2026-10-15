@@ -782,27 +782,30 @@ ul a {
 
     .hero-content {
         position: static;
-        width: 92%;
-        max-width: none;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.92);
-        padding: 14px;
+        width: 62%;
+        max-width: 240px;
+        align-self: flex-start;
+        margin: 8px 0 0 4px;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 8px 10px;
         border-radius: 8px;
     }
 
     .hero-content h1 {
-        font-size: 1.4rem;
-        margin-bottom: 6px;
+        font-size: 1rem;
+        margin-bottom: 3px;
     }
 
     .hero-content p {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
+        font-size: 0.7rem;
+        margin-bottom: 6px;
+        line-height: 1.3;
     }
 
     .hero-btn {
-        padding: 8px 18px;
-        font-size: 0.9rem;
+        padding: 5px 12px;
+        font-size: 0.75rem;
     }
 
     .hero-msg {
@@ -911,4 +914,4 @@ ul a {
     .pages a {
         margin: 4px 8px;
     }
-}
+}   
