@@ -712,31 +712,45 @@ ul a:hover {
 .signin-submit-btn:hover {
     background-color: #f7ca00;
 }
-/* --- Mobile Responsive Fixes --- */
+/* --- Updated Mobile Responsive Fixes --- */
 @media (max-width: 768px) {
-  /* Navbar ko mobile friendly banana */
+  /* Navbar ko compact aur clean karna */
   .navbar {
-    flex-wrap: wrap;
     height: auto;
-    padding: 8px;
+    padding: 8px 10px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
-  /* Search bar ko mobile par poori width dena */
+  /* Extra elements jo mobile par jagah gherte hain unhein hide karna */
+  .nav-deliver, 
+  .nav-signin, 
+  .nav-return,
+  .panel {
+    display: none !important;
+  }
+
+  /* Search bar ko mobile par adjust karna */
   .nav-search {
-    width: 100%;
-    margin: 8px 0;
+    flex-grow: 1;
+    margin: 0 10px;
+    height: 40px;
   }
 
-  /* Product grid boxes ko mobile par 1 column mein karna */
+  .search-input {
+    font-size: 14px;
+  }
+
+  /* Shop section 1 column layout */
   .shop-section {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 15px;
+    padding: 10px;
   }
 
   .box {
     width: 100% !important;
-    margin: 0 auto;
+    margin: 0;
   }
 }
