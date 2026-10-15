@@ -712,3 +712,31 @@ ul a:hover {
 .signin-submit-btn:hover {
     background-color: #f7ca00;
 }
+/* --- Mobile Responsive Fixes --- */
+@media (max-width: 768px) {
+  /* Navbar ko mobile friendly banana */
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px;
+  }
+
+  /* Search bar ko mobile par poori width dena */
+  .nav-search {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  /* Product grid boxes ko mobile par 1 column mein karna */
+  .shop-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .box {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+}
